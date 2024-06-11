@@ -1,3 +1,5 @@
+import math
+
 def analyze_and_transform(numbers):
     if not numbers:
         print("The list is empty")
@@ -22,7 +24,7 @@ def analyze_and_transform(numbers):
     summed = 0
     for num in numbers:
         summed += (num - average) ** 2
-    variance = summed/lun(numbers)
+    variance = summed/len(numbers)
     print(f"Variance: {variance:0.2f}")
 
     variance_2 = sum((num - average) ** 2 for num in numbers) / len(numbers)
